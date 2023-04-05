@@ -1,22 +1,20 @@
 
-//var topics = "HTML, CSS, GIT, Javascript";
-//console.log(topics);
+var topics = ["HTML", "CSS", "GIT", "JS"];
+var randomTopic = topics[Math.floor(Math.random() * topics.length)];
 
-//basic if, then else.  A switch does the same, when do you choose?
-
-//var topic = "HTML";
-
-//if (topic === 'HTML') {
-//  console.log("Let's study HTML!");
-//} else if (topic === 'CSS') {
-//  console.log("Let's study CSS!");
-//} else if (topic === 'Git') {
-//  console.log("Let's study Git!");
-//} else if (topic === 'JavaScript') {
-//  console.log("Let's study JavaScript!");
-//} else {
-//  console.log('Please try again!');
-//}
+function selectTopic() {
+  if (randomTopic === 'HTML') {
+    console.log("Let's study HTML!");
+  } else if (randomTopic === 'CSS') {
+    console.log("Let's study CSS!");
+  } else if (randomTopic === 'Git') {
+    console.log("Let's study Git!");
+  } else if (randomTopic === 'JavaScript') {
+    console.log("Let's study JavaScript!");
+  } else {
+    console.log('Please try again!');
+  }
+}
 
 //looping over an array.  
 
@@ -27,8 +25,14 @@
 //console.log(shapes[x]);
 //}
 
-var topics = ["HTML", "CSS", "GIT", "JS"];
-for(x = 0; x < topics.length; x++) {
-  console.log(topics[x]);
+function listTopics() {
+  for(x = 0; x < topics.length; x++) {
+      console.log(topics[x]);
+  }
 }
 
+console.log('Here are the topics we learned through Prework:');
+listTopics();
+
+console.log('Which topic should we study first?');
+selectTopic();
